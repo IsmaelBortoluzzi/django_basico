@@ -1,5 +1,6 @@
 from django.shortcuts import render
-from django.views.generic import TemplateView
+from django.views.generic import TemplateView, DetailView
+from core.models import Produto
 
 
 class Index(TemplateView):
@@ -10,9 +11,14 @@ class Index(TemplateView):
         return context
 
 
-
 class Contact(TemplateView):
     template_name = 'contact.html'
+
+
+class ProdutoDetails(DetailView):
+    model = Produto
+    template_name = 'produto_details.html'
+    context_object_name = 'produto'
 
 
 # class Contact(ListView):
