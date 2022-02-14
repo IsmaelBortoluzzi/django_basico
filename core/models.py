@@ -10,7 +10,7 @@ class Produto(models.Model):
         return f'{self.nome}'
 
 
-class Cliente(models.Model):
+class Contact(models.Model):
     nome = models.CharField('nome', max_length=128)
     sobrenome = models.CharField('sobrenome', max_length=128)
     email = models.EmailField('email', max_length=128)

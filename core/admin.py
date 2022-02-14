@@ -1,5 +1,5 @@
 from django.contrib import admin
-from core.models import Produto, Cliente
+from core.models import Produto, Contact
 
 
 class ProdutoAdmin(admin.ModelAdmin):
@@ -7,4 +7,4 @@ class ProdutoAdmin(admin.ModelAdmin):
 
 
 admin.site.register(Produto, ProdutoAdmin)
-admin.site.register(Cliente)
+admin.site.register(Contact)
